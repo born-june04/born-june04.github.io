@@ -231,6 +231,221 @@ main {
     color: #1d4ed8;
 }
 
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* If no image, show placeholder */
+.project-image:empty::before {
+    content: "🔬";
+    font-size: 4rem;
+    color: white;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: #666;
+    background: #f3f4f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.project-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.project-collaborators {
+    margin-bottom: 1rem;
+}
+
+.project-collaborators small {
+    color: #888;
+    font-style: italic;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tags .tag {
+    background: #f0f9ff;
+    color: #0369a1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #e0f2fe;
+}
+
+.project-achievements {
+    margin-bottom: 1.25rem;
+}
+
+.achievement {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.project-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn-demo, .btn-source {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-demo {
+    background: #333;
+    color: white;
+}
+
+.btn-demo:hover {
+    background: #000;
+    transform: translateY(-1px);
+}
+
+.btn-source {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.btn-source:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Section Title */
+.projects-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Portfolio Note */
+.portfolio-note {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.portfolio-note p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.portfolio-note a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.portfolio-note a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-date {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    .project-actions {
+        flex-direction: column;
+    }
+}
+
+
 /* Journey Section */
 .journey-section {
     margin-bottom: 48px;
