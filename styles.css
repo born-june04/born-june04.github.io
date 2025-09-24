@@ -15,6 +15,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-top: 60px;
 }
 
 /* Header */
@@ -24,7 +25,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 50;
-    margin-bottom: 40px; /* Adjust this value as needed */
 }
 
 .header-content {
@@ -64,6 +64,7 @@ main {
 .profile-section {
     display: flex;
     gap: 32px;
+    margin-top: 60px;
     margin-bottom: 64px;
     align-items: flex-start;
 }
