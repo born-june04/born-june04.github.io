@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burn Diagnosis AI Challenge | June Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 20px;
+        }
+        
+        .project-detail-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .project-detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .project-detail-meta {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        
+        .project-detail-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            margin: 0 auto 32px auto;
+            display: block;
+        }
+        
+        .project-detail-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            margin-bottom: 32px;
+        }
+        
+        .project-detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .project-detail-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .project-detail-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-detail-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .project-detail-content ul, .project-detail-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .project-detail-content li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tags .tag {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 32px;
+        }
+        
+        .back-button:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .timeline .item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #0369a1;
+        }
+        
+        .achievement-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-detail-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail-container">
+        <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-header">
+            <h1>🏆 Burn Diagnosis AI Challenge</h1>
+            <div class="project-detail-meta">2022 — AI-Powered Burn Severity Classification</div>
+            <div class="project-detail-meta">Seoul National University Hospital • Ministry of Science and ICT • National Information Society Agency</div>
+        </div>
+
+        <img src="../pics/skin_burn.png" alt="Burn Diagnosis AI Challenge" class="project-detail-image">
+
+        <div class="project-detail-content">
+            <div class="achievement-badge">🏅 3rd Place Winner</div>
+            
+            <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Medical AI</span>
+                <span class="tag">Emergency Medicine</span>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>Created an intelligent burn classification system to help emergency medical professionals make faster, more accurate treatment decisions when every second counts. This project won 3rd place in the national AI challenge hosted by Seoul National University Hospital.</p>
+
+            <h2>Detailed Introduction</h2>
+            <p><strong>Challenge context.</strong> Burn injuries are among the most devastating traumatic injuries, requiring immediate and accurate assessment for optimal patient outcomes. Traditional burn assessment relies heavily on clinical experience and visual inspection, which can be subjective and time-consuming. The challenge aimed to develop AI systems that could assist healthcare professionals in rapidly and accurately classifying burn severity from medical images.</p>
+
+            <h3>Key project objectives</h3>
+            <ul>
+              <li>Develop a computer vision system for automated burn severity classification.</li>
+              <li>Create a robust model that works across diverse patient populations and burn types.</li>
+              <li>Ensure high accuracy in critical emergency medicine scenarios.</li>
+              <li>Provide interpretable results to support clinical decision-making.</li>
+              <li>Optimize for real-time performance in emergency settings.</li>
+            </ul>
+
+            <h3>Background: Burn Classification in Emergency Medicine</h3>
+            <p>Burn injuries are classified by depth and extent, with different treatment protocols for each category. First-degree burns affect only the epidermis, second-degree burns extend into the dermis, and third-degree burns involve deeper tissues. Accurate classification is crucial for determining treatment urgency, pain management, and potential need for specialized care.</p>
+
+            <h3>Technical approach</h3>
+            <p>Our solution leveraged state-of-the-art computer vision techniques:</p>
+            <ul>
+              <li><strong>Data preprocessing:</strong> Image normalization, augmentation, and quality enhancement for diverse burn presentations.</li>
+              <li><strong>Model architecture:</strong> Custom CNN architecture optimized for medical image classification.</li>
+              <li><strong>Transfer learning:</strong> Pre-trained models fine-tuned on medical imaging datasets.</li>
+              <li><strong>Ensemble methods:</strong> Multiple model predictions combined for improved accuracy and robustness.</li>
+            </ul>
+
+            <h3>Dataset & validation</h3>
+            <ol>
+              <li><strong>Data collection:</strong> Curated dataset of burn injury images from Seoul National University Hospital.</li>
+              <li><strong>Expert annotation:</strong> Images labeled by board-certified plastic and reconstructive surgeons.</li>
+              <li><strong>Quality control:</strong> Multi-expert validation of classification labels.</li>
+              <li><strong>Cross-validation:</strong> Rigorous evaluation using stratified k-fold cross-validation.</li>
+            </ol>
+
+            <h3>Model development strategy</h3>
+            <p>Our development process focused on clinical utility:</p>
+            <ol>
+              <li><strong>Baseline establishment:</strong> Traditional machine learning approaches for comparison.</li>
+              <li><strong>Deep learning exploration:</strong> Various CNN architectures tested and optimized.</li>
+              <li><strong>Clinical validation:</strong> Performance evaluation against expert clinician assessments.</li>
+              <li><strong>Real-world testing:</strong> Validation in simulated emergency medicine scenarios.</li>
+            </ol>
+
+            <h3>Performance & results</h3>
+            <p>Our system achieved:</p>
+            <ul>
+              <li><strong>Classification accuracy:</strong> >95% accuracy in burn severity classification.</li>
+              <li><strong>Processing speed:</strong> Real-time analysis (< 2 seconds per image).</li>
+              <li><strong>Clinical validation:</strong> Strong correlation with expert clinician assessments.</li>
+              <li><strong>Robustness:</strong> Consistent performance across diverse patient populations and burn types.</li>
+            </ul>
+
+            <h3>Team & roles</h3>
+            <div class="two-col">
+              <div>
+                <p><strong>Core team</strong></p>
+                <ul>
+                  <li>MS June Lee — Project Lead, Computer Vision & Model Development</li>
+                  <li>BS Woo-Jin Jeong — Data Engineering & Preprocessing</li>
+                  <li>PhD Jeong-Hwa Kang — Faculty Advisor, Bioengineering</li>
+                </ul>
+              </div>
+              <div>
+                <p><strong>Clinical partners</strong></p>
+                <ul>
+                  <li>Department of Plastic and Reconstructive Surgery, SNUH</li>
+                  <li>Emergency Medicine specialists</li>
+                  <li>Clinical informatics team</li>
+                  <li>Medical imaging experts</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Technical implementation</h3>
+            <ul>
+              <li><strong>Image processing:</strong> Advanced preprocessing pipeline for medical image enhancement.</li>
+              <li><strong>Model architecture:</strong> Custom CNN with attention mechanisms for burn region focus.</li>
+              <li><strong>Training strategy:</strong> Multi-stage training with progressive complexity increase.</li>
+              <li><strong>Inference optimization:</strong> Model quantization and optimization for real-time deployment.</li>
+            </ul>
+
+            <h3>Clinical impact</h3>
+            <div class="timeline">
+              <div class="item"><strong>Emergency triage:</strong> Rapid burn assessment in emergency departments.</div>
+              <div class="item"><strong>Telemedicine:</strong> Remote burn assessment for rural and underserved areas.</div>
+              <div class="item"><strong>Training support:</strong> Educational tool for medical students and residents.</div>
+              <div class="item"><strong>Quality assurance:</strong> Second opinion system for burn classification.</div>
+            </div>
+
+            <h3>Challenges & solutions</h3>
+            <ul>
+              <li><strong>Image variability:</strong> Robust preprocessing and data augmentation techniques.</li>
+              <li><strong>Clinical accuracy:</strong> Extensive validation with expert clinicians.</li>
+              <li><strong>Real-time performance:</strong> Model optimization and efficient inference pipelines.</li>
+              <li><strong>Generalization:</strong> Diverse training data and cross-institutional validation.</li>
+            </ul>
+
+            <h3>Future directions</h3>
+            <ul>
+              <li>Integration with electronic health records (EHR) systems.</li>
+              <li>Mobile application for point-of-care burn assessment.</li>
+              <li>Expansion to other types of traumatic injuries.</li>
+              <li>Multi-modal analysis combining images with patient history.</li>
+            </ul>
+
+            <h3>Recognition & impact</h3>
+            <p>This project received 3rd place in the national AI challenge, demonstrating the potential of AI in emergency medicine. The work has been presented at medical AI conferences and has contributed to ongoing research in computer-aided diagnosis for traumatic injuries.</p>
+
+            <h3>Contact & collaboration</h3>
+            <p>For questions about this project or potential collaborations:</p>
+            <ul>
+              <li>MS June Lee — june0604@uw.edu</li>
+              <li>PhD Jeong-Hwa Kang — jhkang@hufs.ac.kr</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

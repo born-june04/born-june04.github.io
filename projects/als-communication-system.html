@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALS Communication System | June Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 20px;
+        }
+        
+        .project-detail-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .project-detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .project-detail-meta {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        
+        .project-detail-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            margin: 0 auto 32px auto;
+            display: block;
+        }
+        
+        .project-detail-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            margin-bottom: 32px;
+        }
+        
+        .project-detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .project-detail-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .project-detail-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-detail-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .project-detail-content ul, .project-detail-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .project-detail-content li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tags .tag {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 32px;
+        }
+        
+        .back-button:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .timeline .item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #0369a1;
+        }
+        
+        .impact-badge {
+            background: linear-gradient(135deg, #ec4899, #be185d);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-detail-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail-container">
+        <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-header">
+            <h1>🏆 Assistive Communication System for ALS</h1>
+            <div class="project-detail-meta">2023 — Multimodal Communication System for ALS Patients</div>
+            <div class="project-detail-meta">Hankuk University of Foreign Studies • Assistive Technology Research</div>
+        </div>
+
+        <img src="../pics/look_to_speak.webp" alt="ALS Communication System" class="project-detail-image">
+
+        <div class="project-detail-content">
+            <div class="impact-badge">❤️ Patient Impact</div>
+            
+            <div class="project-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">Assistive Technology</span>
+                <span class="tag">Speech Processing</span>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>Built a multimodal communication system that helps ALS patients maintain their voice and connection with loved ones as their condition progresses. This project focuses on preserving human dignity and communication abilities for individuals with amyotrophic lateral sclerosis (ALS).</p>
+
+            <h2>Detailed Introduction</h2>
+            <p><strong>Motivation.</strong> Amyotrophic lateral sclerosis (ALS) is a progressive neurodegenerative disease that affects motor neurons, leading to gradual loss of muscle control including speech. As the disease progresses, patients lose their ability to speak, which can lead to social isolation and communication barriers with family and healthcare providers. Our project aims to develop assistive communication technologies that can adapt to the changing needs of ALS patients throughout their disease progression.</p>
+
+            <h3>Key project objectives</h3>
+            <ul>
+              <li>Develop adaptive communication interfaces that evolve with patient capabilities.</li>
+              <li>Create multimodal input systems (eye tracking, gesture recognition, voice synthesis).</li>
+              <li>Implement natural language processing for context-aware communication assistance.</li>
+              <li>Design user-friendly interfaces that are accessible to patients with varying motor abilities.</li>
+              <li>Ensure emotional and psychological support through preserved communication abilities.</li>
+            </ul>
+
+            <h3>Background: ALS Communication Challenges</h3>
+            <p>ALS patients face unique communication challenges as the disease progresses. Early-stage patients may experience slurred speech, while later-stage patients may lose the ability to speak entirely. Traditional augmentative and alternative communication (AAC) devices can be complex and difficult to learn, especially as cognitive abilities may also be affected. Our system addresses these challenges through adaptive, multimodal approaches.</p>
+
+            <h3>Technical approach</h3>
+            <p>Our solution integrates multiple technologies:</p>
+            <ul>
+              <li><strong>Eye tracking:</strong> Computer vision-based eye movement detection for cursor control and text input.</li>
+              <li><strong>Gesture recognition:</strong> Hand and facial gesture detection for alternative input methods.</li>
+              <li><strong>Voice synthesis:</strong> Text-to-speech systems that can preserve the patient's original voice characteristics.</li>
+              <li><strong>Natural language processing:</strong> Context-aware word prediction and sentence completion.</li>
+              <li><strong>Adaptive interfaces:</strong> UI that adjusts based on patient's current abilities and preferences.</li>
+            </ul>
+
+            <h3>System architecture</h3>
+            <ol>
+              <li><strong>Input layer:</strong> Multiple input modalities (eye tracking, gestures, voice, keyboard).</li>
+              <li><strong>Processing layer:</strong> Signal processing, feature extraction, and intent recognition.</li>
+              <li><strong>Language layer:</strong> NLP for context understanding and word prediction.</li>
+              <li><strong>Output layer:</strong> Text display, voice synthesis, and communication delivery.</li>
+              <li><strong>Adaptation layer:</strong> Machine learning for personalization and capability tracking.</li>
+            </ol>
+
+            <h3>Key features</h3>
+            <p>Our system includes several innovative features:</p>
+            <ul>
+              <li><strong>Voice banking:</strong> Early voice recording and synthesis for later use.</li>
+              <li><strong>Predictive text:</strong> AI-powered word and phrase prediction based on context.</li>
+              <li><strong>Emotion recognition:</strong> Facial expression analysis for emotional communication.</li>
+              <li><strong>Family integration:</strong> Shared communication interfaces for family members.</li>
+              <li><strong>Healthcare integration:</strong> Medical communication templates and emergency features.</li>
+            </ul>
+
+            <h3>User experience design</h3>
+            <p>Special attention was paid to user experience:</p>
+            <ul>
+              <li><strong>Progressive disclosure:</strong> Interface complexity adapts to patient's current abilities.</li>
+              <li><strong>Customization:</strong> Highly personalized settings for individual needs.</li>
+              <li><strong>Training support:</strong> Built-in tutorials and practice modes.</li>
+              <li><strong>Accessibility:</strong> Compliance with assistive technology standards.</li>
+            </ul>
+
+            <h3>Team & roles</h3>
+            <div class="two-col">
+              <div>
+                <p><strong>Core team</strong></p>
+                <ul>
+                  <li>MS June Lee — Project Lead, NLP & System Integration</li>
+                  <li>Prof. Nam Yoonho — Faculty Advisor, Assistive Technology</li>
+                  <li>Clinical partners — ALS specialists and speech therapists</li>
+                </ul>
+              </div>
+              <div>
+                <p><strong>Collaborators</strong></p>
+                <ul>
+                  <li>ALS patients and families (user research)</li>
+                  <li>Speech-language pathologists</li>
+                  <li>Occupational therapists</li>
+                  <li>Human-computer interaction researchers</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Development process</h3>
+            <div class="timeline">
+              <div class="item"><strong>Phase 1:</strong> User research with ALS patients and families to understand communication needs.</div>
+              <div class="item"><strong>Phase 2:</strong> Prototype development with basic eye tracking and text-to-speech.</div>
+              <div class="item"><strong>Phase 3:</strong> Advanced features including voice banking and predictive text.</div>
+              <div class="item"><strong>Phase 4:</strong> Clinical testing and iterative improvement based on user feedback.</div>
+            </div>
+
+            <h3>Technical implementation</h3>
+            <ul>
+              <li><strong>Eye tracking:</strong> Computer vision algorithms for robust eye movement detection.</li>
+              <li><strong>Machine learning:</strong> Personalized models for individual communication patterns.</li>
+              <li><strong>Mobile development:</strong> Cross-platform app for accessibility and portability.</li>
+              <li><strong>Cloud integration:</strong> Secure data storage and synchronization across devices.</li>
+            </ul>
+
+            <h3>Clinical validation</h3>
+            <p>Our system underwent rigorous testing:</p>
+            <ul>
+              <li><strong>Usability testing:</strong> Extensive testing with ALS patients and caregivers.</li>
+              <li><strong>Performance evaluation:</strong> Speed and accuracy measurements across different disease stages.</li>
+              <li><strong>Longitudinal studies:</strong> Long-term usage tracking and adaptation assessment.</li>
+              <li><strong>Clinical feedback:</strong> Input from healthcare providers and speech therapists.</li>
+            </ul>
+
+            <h3>Impact & outcomes</h3>
+            <ul>
+              <li><strong>Improved quality of life:</strong> Enhanced communication abilities for ALS patients.</li>
+              <li><strong>Family support:</strong> Better communication between patients and loved ones.</li>
+              <li><strong>Healthcare efficiency:</strong> Streamlined communication with medical teams.</li>
+              <li><strong>Independence:</strong> Greater autonomy in daily communication needs.</li>
+            </ul>
+
+            <h3>Challenges & solutions</h3>
+            <ul>
+              <li><strong>Disease progression:</strong> Adaptive algorithms that evolve with patient capabilities.</li>
+              <li><strong>Fatigue management:</strong> Efficient interfaces that minimize cognitive load.</li>
+              <li><strong>Technical complexity:</strong> Simplified user interfaces with powerful backend processing.</li>
+              <li><strong>Individual differences:</strong> Highly customizable systems for diverse patient needs.</li>
+            </ul>
+
+            <h3>Future directions</h3>
+            <ul>
+              <li>Integration with smart home systems for environmental control.</li>
+              <li>Advanced AI for more natural conversation assistance.</li>
+              <li>Virtual reality interfaces for immersive communication experiences.</li>
+              <li>Expansion to other neurodegenerative diseases with similar communication challenges.</li>
+            </ul>
+
+            <h3>Ethical considerations</h3>
+            <p>This project involved careful consideration of ethical issues:</p>
+            <ul>
+              <li><strong>Privacy protection:</strong> Secure handling of sensitive communication data.</li>
+              <li><strong>Informed consent:</strong> Clear communication about data usage and system capabilities.</li>
+              <li><strong>Dignity preservation:</strong> Ensuring technology enhances rather than replaces human connection.</li>
+              <li><strong>Accessibility equity:</strong> Making advanced technology accessible to all patients regardless of socioeconomic status.</li>
+            </ul>
+
+            <h3>Contact & collaboration</h3>
+            <p>For questions about this project or potential collaborations:</p>
+            <ul>
+              <li>MS June Lee — june0604@uw.edu</li>
+              <li>Prof. Nam Yoonho — yoonho@hufs.ac.kr</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

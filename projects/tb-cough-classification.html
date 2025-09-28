@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuberculosis Cough Classification | June Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 20px;
+        }
+        
+        .project-detail-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .project-detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .project-detail-meta {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        
+        .project-detail-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            margin: 0 auto 32px auto;
+            display: block;
+        }
+        
+        .project-detail-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            margin-bottom: 32px;
+        }
+        
+        .project-detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .project-detail-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .project-detail-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-detail-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .project-detail-content ul, .project-detail-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .project-detail-content li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tags .tag {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 32px;
+        }
+        
+        .back-button:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .timeline .item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #0369a1;
+        }
+        
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-detail-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail-container">
+        <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-header">
+            <h1>🏆 Tuberculosis Cough Classification</h1>
+            <div class="project-detail-meta">2025 | Ongoing — AI-powered TB Detection from Cough Sounds</div>
+            <div class="project-detail-meta">Paul G. Allen School of Computer Science & Engineering • Harborview Medical Center</div>
+        </div>
+
+        <img src="../pics/tb_cough.png" alt="TB Cough Classification" class="project-detail-image">
+
+        <div class="project-detail-content">
+            <div class="project-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Healthcare AI</span>
+                <span class="tag">Signal Processing</span>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>Developing an AI system to detect tuberculosis from cough sounds, making TB screening more accessible in resource-limited settings and helping healthcare workers identify cases earlier to save lives.</p>
+
+            <h2>Detailed Introduction</h2>
+            <p><strong>Motivation.</strong> Tuberculosis (TB) remains one of the world's deadliest infectious diseases, with over 10 million new cases and 1.5 million deaths annually. Early detection is crucial for effective treatment and preventing transmission. However, traditional diagnostic methods like sputum microscopy and chest X-rays require specialized equipment and trained personnel, making them inaccessible in many resource-limited settings.</p>
+
+            <h3>Key project objectives</h3>
+            <ul>
+              <li>Develop a machine learning model that can accurately classify TB from cough sound recordings.</li>
+              <li>Create a mobile-friendly screening tool for use in resource-limited settings.</li>
+              <li>Validate the system's performance across diverse populations and acoustic environments.</li>
+              <li>Ensure the solution is culturally sensitive and accessible to underserved communities.</li>
+              <li>Integrate with existing healthcare workflows to support clinical decision-making.</li>
+            </ul>
+
+            <h3>Background: Global TB Challenge</h3>
+            <p>Tuberculosis disproportionately affects low- and middle-income countries, where access to diagnostic tools is limited. The World Health Organization estimates that 3 million TB cases go undiagnosed each year, contributing to continued transmission and poor outcomes. Our project aims to address this gap by leveraging the ubiquity of mobile devices and the distinct acoustic patterns of TB-related coughs.</p>
+
+            <h3>Technical approach</h3>
+            <p>Our system uses deep learning techniques to analyze cough sound characteristics, including:</p>
+            <ul>
+              <li><strong>Audio preprocessing:</strong> Noise reduction, normalization, and feature extraction from raw audio recordings.</li>
+              <li><strong>Feature engineering:</strong> Mel-frequency cepstral coefficients (MFCCs), spectral features, and temporal patterns.</li>
+              <li><strong>Model architecture:</strong> Convolutional neural networks (CNNs) and recurrent neural networks (RNNs) for audio classification.</li>
+              <li><strong>Data augmentation:</strong> Synthetic data generation to improve model robustness across different recording conditions.</li>
+            </ul>
+
+            <h3>Data collection & privacy</h3>
+            <ol>
+              <li><strong>Ethical approval:</strong> IRB approval for audio data collection from TB patients and healthy controls.</li>
+              <li><strong>Data acquisition:</strong> High-quality audio recordings in controlled clinical environments.</li>
+              <li><strong>Privacy protection:</strong> De-identification of audio samples and secure data storage protocols.</li>
+              <li><strong>Quality control:</strong> Expert validation of TB diagnosis and audio quality assessment.</li>
+            </ol>
+
+            <h3>Model development strategy</h3>
+            <p>We follow a systematic approach to model development:</p>
+            <ol>
+              <li><strong>Baseline models:</strong> Start with traditional machine learning approaches (SVM, Random Forest) for comparison.</li>
+              <li><strong>Deep learning exploration:</strong> Implement CNN and RNN architectures optimized for audio classification.</li>
+              <li><strong>Ensemble methods:</strong> Combine multiple models to improve overall performance and robustness.</li>
+              <li><strong>Cross-validation:</strong> Rigorous evaluation using stratified k-fold cross-validation and holdout test sets.</li>
+            </ol>
+
+            <h3>Evaluation & validation</h3>
+            <p>Our evaluation framework includes:</p>
+            <ul>
+              <li><strong>Performance metrics:</strong> Accuracy, sensitivity, specificity, precision, and F1-score.</li>
+              <li><strong>Clinical validation:</strong> Comparison with standard diagnostic methods (sputum microscopy, chest X-ray).</li>
+              <li><strong>Robustness testing:</strong> Performance across different recording devices, environments, and patient populations.</li>
+              <li><strong>Bias assessment:</strong> Evaluation across age, gender, and demographic groups to ensure equitable performance.</li>
+            </ul>
+
+            <h3>Team & roles</h3>
+            <div class="two-col">
+              <div>
+                <p><strong>Core investigators</strong></p>
+                <ul>
+                  <li>MS June Lee — Project Lead, Machine Learning & Signal Processing</li>
+                  <li>PhD Alex Ching — Audio Processing & Model Architecture</li>
+                  <li>PhD Cynthia Dong — Clinical Validation & Data Analysis</li>
+                  <li>Prof. Shwetak N. Patel — Faculty Advisor, Ubiquitous Computing</li>
+                  <li>MD David Horne — Clinical Partner, Harborview Medical Center</li>
+                </ul>
+              </div>
+              <div>
+                <p><strong>Collaborators</strong></p>
+                <ul>
+                  <li>Clinical informatics & data governance</li>
+                  <li>Audio engineering & signal processing</li>
+                  <li>Mobile app development</li>
+                  <li>Global health & implementation research</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Implementation & deployment</h3>
+            <ul>
+              <li><strong>Mobile application:</strong> Cross-platform app for audio recording and real-time analysis.</li>
+              <li><strong>Cloud infrastructure:</strong> Secure backend for model inference and data processing.</li>
+              <li><strong>Integration:</strong> API for integration with existing healthcare information systems.</li>
+              <li><strong>User interface:</strong> Intuitive design for healthcare workers with varying technical expertise.</li>
+            </ul>
+
+            <h3>Timeline & milestones</h3>
+            <div class="timeline">
+              <div class="item"><strong>Months 0–3:</strong> Data collection setup, IRB approval, initial audio preprocessing pipeline.</div>
+              <div class="item"><strong>Months 4–9:</strong> Model development, baseline performance evaluation, feature engineering optimization.</div>
+              <div class="item"><strong>Months 10–15:</strong> Clinical validation, mobile app development, pilot testing in clinical settings.</div>
+              <div class="item"><strong>Months 16+:</strong> Field deployment, performance monitoring, iterative improvements based on user feedback.</div>
+            </div>
+
+            <h3>Expected outcomes</h3>
+            <ul>
+              <li>Validated AI model for TB detection from cough sounds with >90% accuracy.</li>
+              <li>Mobile screening tool deployable in resource-limited settings.</li>
+              <li>Clinical evidence supporting the use of audio-based TB screening.</li>
+              <li>Open-source framework for similar audio-based diagnostic applications.</li>
+            </ul>
+
+            <h3>Challenges & mitigation</h3>
+            <ul>
+              <li><strong>Audio quality variation:</strong> Robust preprocessing and data augmentation techniques.</li>
+              <li><strong>Cultural sensitivity:</strong> Community engagement and culturally appropriate implementation.</li>
+              <li><strong>Regulatory approval:</strong> Early engagement with health authorities and regulatory bodies.</li>
+              <li><strong>Scalability:</strong> Cloud-based infrastructure and efficient model deployment strategies.</li>
+            </ul>
+
+            <h3>Global impact potential</h3>
+            <p>This project has the potential to revolutionize TB screening in resource-limited settings by providing an accessible, cost-effective, and non-invasive screening tool. By leveraging the ubiquity of mobile devices, we can bring advanced diagnostic capabilities to underserved populations and contribute to global TB elimination efforts.</p>
+
+            <h3>Contact & collaboration</h3>
+            <p>If you're interested in collaborating, contributing data, or learning more about this project, please contact:</p>
+            <ul>
+              <li>MS June Lee — june0604@uw.edu</li>
+              <li>Prof. Shwetak N. Patel — shwetak@cs.washington.edu</li>
+              <li>MD David Horne — dhorne@uw.edu</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
