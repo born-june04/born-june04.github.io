@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALS Communication System | June Lee</title>
+    <title>SpeAKN: ALS Communication System | June Lee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -42,6 +42,25 @@
             border-radius: 12px;
             margin: 0 auto 32px auto;
             display: block;
+        }
+        
+        .figure-container {
+            text-align: center;
+            margin: 24px 0;
+        }
+        
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .figure-caption {
+            margin-top: 8px;
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
         }
         
         .project-detail-content {
@@ -157,6 +176,34 @@
             margin-bottom: 1rem;
         }
         
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .performance-table th,
+        .performance-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .performance-table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
         @media (max-width: 768px) {
             .two-col {
                 grid-template-columns: 1fr;
@@ -173,163 +220,242 @@
         <a href="../index.html" class="back-button">← Back to Portfolio</a>
         
         <div class="project-detail-header">
-            <h1>🏆 Assistive Communication System for ALS</h1>
-            <div class="project-detail-meta">2023 — Multimodal Communication System for ALS Patients</div>
-            <div class="project-detail-meta">Hankuk University of Foreign Studies • Assistive Technology Research</div>
+            <h1>SpeAKN: Speak for ALS with Korean NLP</h1>
+            <div class="project-detail-meta">2023 — AI-Powered Communication System for ALS Patients</div>
+            <div class="project-detail-meta">Hankuk University of Foreign Studies • HUFS AI Project</div>
         </div>
 
-        <img src="../pics/look_to_speak.webp" alt="ALS Communication System" class="project-detail-image">
-
+        <div class="figure-container">
+            <img src="../pics/als/figure1.png" alt="Look to Speak Application Interface" class="project-detail-image">
+            <div class="figure-caption">Figure 1: 'Look-to-Speak' Application Interface</div>
+        </div>
+        
         <div class="project-detail-content">
-            <div class="impact-badge">❤️ Patient Impact</div>
+            <div class="impact-badge">Assistive Technology Research</div>
             
             <div class="project-tags">
-                <span class="tag">NLP</span>
+                <span class="tag">Korean NLP</span>
+                <span class="tag">Eye-Tracking</span>
+                <span class="tag">Speech Recognition</span>
+                <span class="tag">Transformer Models</span>
+                <span class="tag">GRU Networks</span>
                 <span class="tag">Assistive Technology</span>
-                <span class="tag">Speech Processing</span>
             </div>
 
             <h2>Project Overview</h2>
-            <p>Built a multimodal communication system that helps ALS patients maintain their voice and connection with loved ones as their condition progresses. This project focuses on preserving human dignity and communication abilities for individuals with amyotrophic lateral sclerosis (ALS).</p>
+            <p>SpeAKN (Speak for ALS with Korean NLP) is an innovative AI-powered communication system designed specifically for ALS patients who have lost their ability to speak. The system combines eye-tracking technology with advanced Korean natural language processing to provide contextually appropriate response suggestions, enabling meaningful communication for patients with progressive motor function decline.</p>
 
-            <h2>Detailed Introduction</h2>
-            <p><strong>Motivation.</strong> Amyotrophic lateral sclerosis (ALS) is a progressive neurodegenerative disease that affects motor neurons, leading to gradual loss of muscle control including speech. As the disease progresses, patients lose their ability to speak, which can lead to social isolation and communication barriers with family and healthcare providers. Our project aims to develop assistive communication technologies that can adapt to the changing needs of ALS patients throughout their disease progression.</p>
+            <div class="figure-container">
+                <img src="../pics/als/figure2.png" alt="AI-TRACKING System Pipeline">
+                <div class="figure-caption">Figure 2: Overall model architecture overview. Two AI models were used: the first model processes voice data, and the second model uses the sentence output from the first model as input to generate final response sentences.</div>
+            </div>
 
-            <h3>Key project objectives</h3>
-            <ul>
-              <li>Develop adaptive communication interfaces that evolve with patient capabilities.</li>
-              <li>Create multimodal input systems (eye tracking, gesture recognition, voice synthesis).</li>
-              <li>Implement natural language processing for context-aware communication assistance.</li>
-              <li>Design user-friendly interfaces that are accessible to patients with varying motor abilities.</li>
-              <li>Ensure emotional and psychological support through preserved communication abilities.</li>
-            </ul>
+            <h2>Problem Statement</h2>
+            <p>ALS (Amyotrophic Lateral Sclerosis) is a neurodegenerative disease in which motor nerve cells in the brain and spinal cord progressively deteriorate. Over time, ALS patients lose their ability to communicate using natural language, with 80-95% of patients requiring alternative communication methods known as AAC (Augmentative and Alternative Communication).</p>
+            
+            <p>Existing solutions like "Look to Speak" require users to make numerous selections before reaching their intended response, and users cannot pre-input their desired responses. Our AI-TRACKING system addresses these limitations by combining eye-tracking technology with artificial intelligence to provide contextually relevant response options.</p>
 
-            <h3>Background: ALS Communication Challenges</h3>
-            <p>ALS patients face unique communication challenges as the disease progresses. Early-stage patients may experience slurred speech, while later-stage patients may lose the ability to speak entirely. Traditional augmentative and alternative communication (AAC) devices can be complex and difficult to learn, especially as cognitive abilities may also be affected. Our system addresses these challenges through adaptive, multimodal approaches.</p>
-
-            <h3>Technical approach</h3>
-            <p>Our solution integrates multiple technologies:</p>
-            <ul>
-              <li><strong>Eye tracking:</strong> Computer vision-based eye movement detection for cursor control and text input.</li>
-              <li><strong>Gesture recognition:</strong> Hand and facial gesture detection for alternative input methods.</li>
-              <li><strong>Voice synthesis:</strong> Text-to-speech systems that can preserve the patient's original voice characteristics.</li>
-              <li><strong>Natural language processing:</strong> Context-aware word prediction and sentence completion.</li>
-              <li><strong>Adaptive interfaces:</strong> UI that adjusts based on patient's current abilities and preferences.</li>
-            </ul>
-
-            <h3>System architecture</h3>
+            <h2>Technical Architecture</h2>
+            
+            <h3>System Pipeline</h3>
+            <p>The SpeAKN system operates through a two-stage AI pipeline:</p>
             <ol>
-              <li><strong>Input layer:</strong> Multiple input modalities (eye tracking, gestures, voice, keyboard).</li>
-              <li><strong>Processing layer:</strong> Signal processing, feature extraction, and intent recognition.</li>
-              <li><strong>Language layer:</strong> NLP for context understanding and word prediction.</li>
-              <li><strong>Output layer:</strong> Text display, voice synthesis, and communication delivery.</li>
-              <li><strong>Adaptation layer:</strong> Machine learning for personalization and capability tracking.</li>
+                <li><strong>Speech-to-Text (Wav2Text):</strong> Converts incoming voice questions to text using advanced speech recognition</li>
+                <li><strong>Context-Aware Response Generation (Text2Text):</strong> Analyzes the textual context and generates appropriate response options</li>
+                <li><strong>Eye-Tracking Selection:</strong> Patients select their intended response using eye movements</li>
             </ol>
 
-            <h3>Key features</h3>
-            <p>Our system includes several innovative features:</p>
+            <div class="figure-container">
+                <img src="../pics/als/figure6.png" alt="SpeAKN Model Architecture">
+                <div class="figure-caption">Figure 6: Overall architecture of the SpeAKN model. Composed of Wav2Text and Text2Text models, appropriately utilizing transformer encoder and self-attention layers. Unlike existing models, a GRU layer was added to focus on learning Korean word order.</div>
+            </div>
+
+            <h2>Data and Training</h2>
+            
+            <h3>Dataset</h3>
+            <p>This project utilized the National Institute of Korean Language's datasets:</p>
             <ul>
-              <li><strong>Voice banking:</strong> Early voice recording and synthesis for later use.</li>
-              <li><strong>Predictive text:</strong> AI-powered word and phrase prediction based on context.</li>
-              <li><strong>Emotion recognition:</strong> Facial expression analysis for emotional communication.</li>
-              <li><strong>Family integration:</strong> Shared communication interfaces for family members.</li>
-              <li><strong>Healthcare integration:</strong> Medical communication templates and emergency features.</li>
+                <li><strong>Everyday Conversation Speech Corpus 2020:</strong> 870,162 audio files and 2,231 corresponding sentence data points</li>
+                <li><strong>Everyday Conversation Corpus 2020:</strong> 2,232 sentence data points</li>
+                <li><strong>Total data:</strong> ~500 hours of conversation data from 2,739 participants</li>
+                <li><strong>Audio format:</strong> 16kHz PCM format</li>
+                <li><strong>Text format:</strong> UTF-8 JSON encoding</li>
             </ul>
 
-            <h3>User experience design</h3>
-            <p>Special attention was paid to user experience:</p>
+            <h3>Model Optimization</h3>
+            <p>We experimentally tested various optimization approaches:</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure3.png" alt="Optimizer Comparison">
+                <div class="figure-caption">Figure 3: X-axis represents training epochs, Y-axis represents training time. Shows that the AdamW Optimizer's training time stabilizes during the learning process.</div>
+            </div>
+
+            <p>The AdamW Optimizer demonstrated superior performance with faster learning progression and better stabilization during training compared to the Sophia Optimizer.</p>
+
+            <h3>Architecture Innovations</h3>
+            <p>Our SpeAKN model employs several key innovations:</p>
             <ul>
-              <li><strong>Progressive disclosure:</strong> Interface complexity adapts to patient's current abilities.</li>
-              <li><strong>Customization:</strong> Highly personalized settings for individual needs.</li>
-              <li><strong>Training support:</strong> Built-in tutorials and practice modes.</li>
-              <li><strong>Accessibility:</strong> Compliance with assistive technology standards.</li>
+                <li><strong>GRU Layers:</strong> Successfully overcome vanishing gradient problems, particularly effective for Korean language processing</li>
+                <li><strong>Transformer Encoders:</strong> For robust feature extraction from speech and text</li>
+                <li><strong>Self-Attention Mechanisms:</strong> To capture long-range dependencies in Korean conversations</li>
             </ul>
 
-            <h3>Team & roles</h3>
+            <div class="figure-container">
+                <img src="../pics/als/figure4.png" alt="LSTM vs GRU Comparison">
+                <div class="figure-caption">Figure 4: (Top) LSTM layer, (Bottom) GRU layer. Moving rightward shows the parameters of learned hidden states. Compared to the LSTM layer, the GRU layer shows that red parameters (vanishing gradients) disappear at H5.</div>
+            </div>
+
+            <h3>Audio Processing Optimization</h3>
+            <p>To handle varying audio lengths efficiently, we analyzed the distribution of audio data lengths:</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure5.png" alt="Audio Length Distribution">
+                <div class="figure-caption">Figure 5: Histogram representation of audio data lengths. The maximum length is 220,000 while the average is 25,000, approximately 10 times smaller. By setting audio data length to 100,000, we can avoid the curse of dimensionality.</div>
+            </div>
+
+            <p>We set the standardized audio length to 100,000 samples to balance computational efficiency with data preservation, avoiding the curse of dimensionality while maintaining essential information.</p>
+
+            <h2>Results and Performance</h2>
+            
+            <h3>Initial Performance Metrics</h3>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Model Component</th>
+                        <th>Train MSE</th>
+                        <th>Validation MSE</th>
+                        <th>Input Type</th>
+                        <th>Output Quality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Speech2Text</td>
+                        <td>10.039</td>
+                        <td>12.569</td>
+                        <td>Voice/Question</td>
+                        <td>Moderate accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Text2Text</td>
+                        <td>11.234</td>
+                        <td>13.788</td>
+                        <td>Text/Answer</td>
+                        <td>Requires improvement</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Attention Visualization</h3>
+            <p>To verify model learning effectiveness, we visualized attention patterns:</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure7.png" alt="Attention Visualization">
+                <div class="figure-caption">Figure 7: Visualizing Attention - Analysis showed the model needed improvement in focusing on important linguistic features.</div>
+            </div>
+
+            <h3>Data Quality Analysis</h3>
+            <p>Our analysis revealed important insights about the training data:</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure8.png" alt="Training Data Distribution">
+                <div class="figure-caption">Figure 8: Pie chart showing the data actually used for training - Only 14.3% of the original dataset consisted of meaningful question-answer pairs.</div>
+            </div>
+
+            <h3>Korean Language Challenges</h3>
+            <p>We identified specific challenges related to Korean language processing:</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure9.png" alt="Token Frequency Analysis">
+                <div class="figure-caption">Figure 9: Bar chart showing tokens appearing more than 5,000 times. Korean particles such as '이' and '는' appear frequently, presenting unique processing challenges.</div>
+            </div>
+
+            <div class="figure-container">
+                <img src="../pics/als/figure10.png" alt="Token Distribution">
+                <div class="figure-caption">Figure 10: Pie chart showing the proportion of tokens by frequency of appearance - 53.8% of tokens appeared only once, suggesting the need for better handling of rare tokens.</div>
+            </div>
+
+            <h2>Eye-Tracking Implementation</h2>
+            <p>The final system integrates eye-tracking technology for user interaction. When a question like "아픈 곳은 없어요?" (Do you have any pain?) is processed, the system generates contextually appropriate response options that patients can select through eye movements.</p>
+
+            <div class="figure-container">
+                <img src="../pics/als/fig11-1.png" alt="Eye-tracking Interface 1">
+                <div class="figure-caption">Figure 11-1: Eye-Tracking Implementation - Initial interface with response options</div>
+            </div>
+
+            <div class="figure-container">
+                <img src="../pics/als/fig11-2.png" alt="Eye-tracking Interface 2">
+                <div class="figure-caption">Figure 11-2: Eye-Tracking Implementation - Response selection process</div>
+            </div>
+
+            <div class="figure-container">
+                <img src="../pics/als/fig11-3.png" alt="Eye-tracking Interface 3">
+                <div class="figure-caption">Figure 11-3: Eye-Tracking Implementation - Final response confirmation</div>
+            </div>
+
+            <h2>Technical Implementation Details</h2>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Real-time Speech Processing:</strong> Immediate conversion of caregiver questions to text</li>
+                <li><strong>Context-Aware NLP:</strong> Korean language-specific processing for accurate response generation</li>
+                <li><strong>Adaptive Interface:</strong> Eye-tracking based selection system requiring minimal motor function</li>
+                <li><strong>Personalization:</strong> Learning from user interaction patterns over time</li>
+            </ul>
+
+            <h3>Technical Stack</h3>
+            <ul>
+                <li><strong>Speech Recognition:</strong> Google SpeechRecognition API</li>
+                <li><strong>Language Model:</strong> Kakao KoGPT for Korean text generation</li>
+                <li><strong>Deep Learning:</strong> Custom transformer and GRU architectures</li>
+                <li><strong>Eye-Tracking:</strong> Computer vision-based gaze detection</li>
+            </ul>
+
+            <h3>Team Collaboration</h3>
             <div class="two-col">
-              <div>
-                <p><strong>Core team</strong></p>
-                <ul>
-                  <li>MS June Lee — Project Lead, NLP & System Integration</li>
-                  <li>Prof. Nam Yoonho — Faculty Advisor, Assistive Technology</li>
-                  <li>Clinical partners — ALS specialists and speech therapists</li>
-                </ul>
-              </div>
-              <div>
-                <p><strong>Collaborators</strong></p>
-                <ul>
-                  <li>ALS patients and families (user research)</li>
-                  <li>Speech-language pathologists</li>
-                  <li>Occupational therapists</li>
-                  <li>Human-computer interaction researchers</li>
-                </ul>
-              </div>
+                <div>
+                    <p><strong>Development Team</strong></p>
+                    <ul>
+                        <li>June Lee — Project Lead, NLP Architecture</li>
+                        <li>Ohjoon Kwon — Speech Processing</li>
+                        <li>Youngjin Jeong — Model Optimization</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Research Team</strong></p>
+                    <ul>
+                        <li>Chaeyeon Kim — Data Analysis</li>
+                        <li>Jeongmin Lee — Eye-Tracking Implementation</li>
+                        <li>Faculty Advisors — Clinical Guidance</li>
+                    </ul>
+                </div>
             </div>
 
-            <h3>Development process</h3>
-            <div class="timeline">
-              <div class="item"><strong>Phase 1:</strong> User research with ALS patients and families to understand communication needs.</div>
-              <div class="item"><strong>Phase 2:</strong> Prototype development with basic eye tracking and text-to-speech.</div>
-              <div class="item"><strong>Phase 3:</strong> Advanced features including voice banking and predictive text.</div>
-              <div class="item"><strong>Phase 4:</strong> Clinical testing and iterative improvement based on user feedback.</div>
-            </div>
-
-            <h3>Technical implementation</h3>
+            <h2>Impact and Future Directions</h2>
+            
+            <h3>Clinical Significance</h3>
+            <p>SpeAKN represents a significant advancement in assistive technology for ALS patients by:</p>
             <ul>
-              <li><strong>Eye tracking:</strong> Computer vision algorithms for robust eye movement detection.</li>
-              <li><strong>Machine learning:</strong> Personalized models for individual communication patterns.</li>
-              <li><strong>Mobile development:</strong> Cross-platform app for accessibility and portability.</li>
-              <li><strong>Cloud integration:</strong> Secure data storage and synchronization across devices.</li>
+                <li>Reducing communication time and cognitive load</li>
+                <li>Providing contextually relevant response options</li>
+                <li>Adapting to progressive motor function decline</li>
+                <li>Supporting Korean language-specific communication patterns</li>
             </ul>
 
-            <h3>Clinical validation</h3>
-            <p>Our system underwent rigorous testing:</p>
+            <h3>Future Enhancements</h3>
             <ul>
-              <li><strong>Usability testing:</strong> Extensive testing with ALS patients and caregivers.</li>
-              <li><strong>Performance evaluation:</strong> Speed and accuracy measurements across different disease stages.</li>
-              <li><strong>Longitudinal studies:</strong> Long-term usage tracking and adaptation assessment.</li>
-              <li><strong>Clinical feedback:</strong> Input from healthcare providers and speech therapists.</li>
+                <li>Integration with additional AAC modalities</li>
+                <li>Advanced personalization through continuous learning</li>
+                <li>Expansion to other neurodegenerative conditions</li>
+                <li>Real-time emotion recognition and response adaptation</li>
+                <li>Multi-language support for diverse patient populations</li>
             </ul>
 
-            <h3>Impact & outcomes</h3>
-            <ul>
-              <li><strong>Improved quality of life:</strong> Enhanced communication abilities for ALS patients.</li>
-              <li><strong>Family support:</strong> Better communication between patients and loved ones.</li>
-              <li><strong>Healthcare efficiency:</strong> Streamlined communication with medical teams.</li>
-              <li><strong>Independence:</strong> Greater autonomy in daily communication needs.</li>
-            </ul>
+            <h3>Open Source Contribution</h3>
+            <p>The eye-tracking implementation is available as an open-source project: <a href="https://github.com/junhyk-lee/Look_to_Speak" target="_blank">https://github.com/junhyk-lee/Look_to_Speak</a></p>
 
-            <h3>Challenges & solutions</h3>
-            <ul>
-              <li><strong>Disease progression:</strong> Adaptive algorithms that evolve with patient capabilities.</li>
-              <li><strong>Fatigue management:</strong> Efficient interfaces that minimize cognitive load.</li>
-              <li><strong>Technical complexity:</strong> Simplified user interfaces with powerful backend processing.</li>
-              <li><strong>Individual differences:</strong> Highly customizable systems for diverse patient needs.</li>
-            </ul>
-
-            <h3>Future directions</h3>
-            <ul>
-              <li>Integration with smart home systems for environmental control.</li>
-              <li>Advanced AI for more natural conversation assistance.</li>
-              <li>Virtual reality interfaces for immersive communication experiences.</li>
-              <li>Expansion to other neurodegenerative diseases with similar communication challenges.</li>
-            </ul>
-
-            <h3>Ethical considerations</h3>
-            <p>This project involved careful consideration of ethical issues:</p>
-            <ul>
-              <li><strong>Privacy protection:</strong> Secure handling of sensitive communication data.</li>
-              <li><strong>Informed consent:</strong> Clear communication about data usage and system capabilities.</li>
-              <li><strong>Dignity preservation:</strong> Ensuring technology enhances rather than replaces human connection.</li>
-              <li><strong>Accessibility equity:</strong> Making advanced technology accessible to all patients regardless of socioeconomic status.</li>
-            </ul>
-
-            <h3>Contact & collaboration</h3>
-            <p>For questions about this project or potential collaborations:</p>
-            <ul>
-              <li>MS June Lee — june0604@uw.edu</li>
-              <li>Prof. Nam Yoonho — yoonho@hufs.ac.kr</li>
-            </ul>
+            <h3>Research Publications</h3>
+            <p>This work contributes to the growing body of research in assistive technology and demonstrates the potential of AI-powered solutions for improving quality of life for patients with neurodegenerative diseases.</p>
         </div>
     </div>
 </body>
