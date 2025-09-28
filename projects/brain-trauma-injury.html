@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Trauma Injury Foundation Model | June Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 20px;
+        }
+        
+        .project-detail-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .project-detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .project-detail-meta {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        
+        .project-detail-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            margin: 0 auto 32px auto;
+            display: block;
+        }
+        
+        .project-detail-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            padding: 2rem;
+            margin-bottom: 32px;
+        }
+        
+        .project-detail-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .project-detail-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .project-detail-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-detail-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .project-detail-content ul, .project-detail-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .project-detail-content li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tags .tag {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 32px;
+        }
+        
+        .back-button:hover {
+            background: #000;
+            transform: translateY(-1px);
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .timeline .item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #0369a1;
+        }
+        
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-detail-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail-container">
+        <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-detail-header">
+            <h1>🏆 Brain Trauma Injury Foundation Model</h1>
+            <div class="project-detail-meta">2025 | Ongoing — Multimodal Foundation Model for Traumatic Brain & Spinal Injury</div>
+            <div class="project-detail-meta">UW Bioengineering • Harborview Medical Center • Multidisciplinary Clinical Partners</div>
+        </div>
+
+        <img src="../pics/brain_injury.png" alt="Brain Trauma Injury Foundation Model" class="project-detail-image">
+
+        <div class="project-detail-content">
+            <div class="project-tags">
+                <span class="tag">Foundation Model</span>
+                <span class="tag">Multimodal</span>
+                <span class="tag">Large Scale</span>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>Building a Foundation Model for traumatic brain and spinal injuries that can extract and structure data from medical records and imaging. Project aims to help clinicians categorize injuries, track recovery, and recommend treatment, while also addressing inequities in care by factoring in social determinants of health.</p>
+            <h2>Detailed Introduction</h2>
+            <p><strong>Motivation.</strong> Traumatic brain injury (TBI) and spinal cord injury (SCI) cause enormous individual and societal burden — in morbidity, long-term disability, and cost. Clinical information required to guide care is often dispersed across free-text clinical notes, imaging studies, and administrative records. Our goal is to create a robust, privacy-preserving foundation model that consolidates these multi-source signals into structured, actionable clinical knowledge to support clinicians, researchers, and patients.</p>
+
+            <h3>Key project objectives</h3>
+            <ul>
+              <li>Develop a multimodal foundation model (text + radiology imaging + structured EHR signals) focused on brain and spinal trauma.</li>
+              <li>Extract and normalize clinically relevant entities (injury type, severity, interventions, devices, outcomes, SDOH data).</li>
+              <li>Provide clinician-facing tools for categorization, recovery tracking, and evidence-based next-step recommendations.</li>
+              <li>Design and apply privacy-preserving transforms (e.g., Stained Glass Transform) to enable secure model training and limited third-party access.</li>
+              <li>Perform rigorous evaluation for accuracy, fairness, privacy leakage, and clinical utility including third-party audits.</li>
+            </ul>
+
+            <h3>Background: Harborview Level I Trauma Context</h3>
+            <p>Harborview Medical Center is the region's Level I trauma and burn center and serves a high volume of complex trauma cases across Washington, Alaska, Montana, and Idaho. As a safety-net, academic referral center, Harborview treats diverse and often under-served populations — making it uniquely positioned to provide the high-volume, heterogeneous data necessary for building a clinically useful foundation model.</p>
+
+            <h3>Why a dedicated foundation model?</h3>
+            <p>General foundation models often underperform on institution-specific radiology workflows, modality characteristics, and reporting conventions. Domain-adaptive pretraining (continual in‑domain pretraining) demonstrated in recent radiology scaling studies shows significant gains even with moderate amounts of curated local data; therefore, a focused foundation model will be more accurate, robust, and clinically useful for TBI/SCI tasks than a general-purpose model alone.</p>
+
+            <h3>Data pipeline & privacy strategy</h3>
+            <ol>
+              <li><strong>Acquisition & governance:</strong> IRB approvals, data use agreements, consent where required. Define cohorts (TBI, SCI), inclusion/exclusion, and data retention rules.</li>
+              <li><strong>Stained Glass Transform (SGT):</strong> Apply privacy-preserving transforms early in the pipeline so that stored training copies minimize re-identification risk while preserving task-relevant signals.</li>
+              <li><strong>Preprocessing & labeling:</strong> Natural language processing (de-identification, tokenization, mapping to clinical ontologies), imaging normalization, automated and expert annotation (for injuries, hardware, severity metrics), and SDOH linkage (zip code, insurance, housing status as allowed).</li>
+              <li><strong>Data validation & split:</strong> Create held-out institutional and external test sets for robust validation; track metadata (scanner, protocol, demographics).</li>
+            </ol>
+
+            <h3>Model development strategy (high level)</h3>
+            <p>We recommend an incremental approach:</p>
+            <ol>
+              <li><strong>Pilot fine-tuning (cloud-based):</strong> Start by fine-tuning a commercially supported foundation model via AWS Bedrock using SGT-protected text and low-resolution imaging to prove feasibility and clinician utility.</li>
+              <li><strong>Incremental modality expansion:</strong> Add high-resolution CT/MRI/angiography, implement multimodal fusion layers, and incorporate report supervision (clinical labels + UniCL-like structured supervision).</li>
+              <li><strong>Custom domain foundation:</strong> If required by performance or control needs, use continual pretraining on a larger SGT-protected in-domain corpus (tens of thousands to millions of images/text pairs) to create a trauma-optimized foundation encoder (vision & language branches) similar to approaches in recent radiology scaling law studies.</li>
+              <li><strong>Third-party evaluation & governance:</strong> Engage independent clinical and technical auditors for fairness, privacy, and safety assessments before any clinical pilot.</li>
+            </ol>
+
+            <h3>Evaluation, safety & fairness</h3>
+            <p>Evaluation will include standard technical metrics (AUC, sensitivity, specificity, dice for segmentation), but must also include:</p>
+            <ul>
+              <li>Fairness audits across age, sex, race/ethnicity, payer status, and geography.</li>
+              <li>Privacy leakage testing (can identifiers be recovered?) and red-team adversarial probes.</li>
+              <li>Clinical utility studies with clinicians to measure interpretability, workflow fit, and downstream impact on decision-making.</li>
+            </ul>
+
+            <h3>Team & roles</h3>
+            <div class="two-col">
+              <div>
+                <p><strong>Core investigators</strong></p>
+                <ul>
+                  <li>MS Benjamin Han — Data engineering & model operations</li>
+                  <li>MS Pari — Applied ML & multimodal fusion</li>
+                  <li>PhD Rupak Rajachar — Model architecture & radiology imaging</li>
+                  <li>MD Diana Wiseman — Neurosurgery lead, clinical labeling & validation</li>
+                  <li>MD Jamie Ott, MD Heather Barnett — Orthopedics clinical partners</li>
+                  <li>MD Christopher Lewis — Rehabilitation medicine, outcomes & SDOH integration</li>
+                </ul>
+              </div>
+              <div>
+                <p><strong>Advisors & collaborators</strong></p>
+                <ul>
+                  <li>Clinical informatics & IRB governance</li>
+                  <li>Imaging informatics (Radiology IT, PACS/Visage integration)</li>
+                  <li>Privacy & legal (data use, HIPAA compliance)</li>
+                  <li>External auditing partners for fairness/privacy evaluation</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Infrastructure & tooling</h3>
+            <ul>
+              <li>Secure cloud environment (AWS recommended for Bedrock integration) with encryption at rest/in transit and VPC isolation.</li>
+              <li>Data lake for SGT-protected artifacts + metadata catalog.</li>
+              <li>Model training platform supporting multimodal transformers, distributed training, and experiment tracking (MLflow, Weights & Biases, or similar).</li>
+              <li>API gateway for clinical integration with Epic and Visage (FHIR mappings, HL7/RIS connectors) — outputs should be pluggable clinical decision support artifacts rather than black-box predictions.</li>
+            </ul>
+
+            <h3>Timeline & milestones (example)</h3>
+            <div class="timeline">
+              <div class="item"><strong>Months 0–3:</strong> Governance, IRB, data pipeline prototypes, SGT proof-of-concept, pilot fine-tuning on AWS Bedrock (text-only).</div>
+              <div class="item"><strong>Months 4–9:</strong> Add imaging modality (CT/CT-angio), structured labeling for key injury classes, clinician-in-the-loop evaluation, initial external audit.</div>
+              <div class="item"><strong>Months 10–18:</strong> Scale data, continual pretraining for domain encoder, multimodal fusion, prospective clinical pilot for a targeted use-case (e.g., injury categorization & discharge planning assistance).</div>
+              <div class="item"><strong>Months 18+:</strong> Production integration, monitoring, regulatory preparations, multi-center validation and model updates.</div>
+            </div>
+
+            <h3>Deliverables</h3>
+            <ul>
+              <li>SGT-protected trauma dataset & metadata catalog (for internal, governed use).</li>
+              <li>Multimodal trauma foundation encoder and fine‑tuned downstream models for categorization, segmentation, and prognosis.</li>
+              <li>Clinician dashboard / FHIR API for integration with Epic and radiology systems.</li>
+              <li>Evaluation reports (technical, fairness, privacy) and documentation for audits and regulators.</li>
+            </ul>
+
+            <h3>Risks & mitigation</h3>
+            <ul>
+              <li><strong>Data privacy risk:</strong> Mitigate via SGT, strict governance, limited access controls, and regular privacy audits.</li>
+              <li><strong>Model bias & fairness:</strong> Continuous audits, balanced data sampling, subgroup metrics, and clinician oversight.</li>
+              <li><strong>Clinical adoption:</strong> Early clinician involvement, human-in-the-loop design, interpretable outputs and clear limitations.</li>
+              <li><strong>Cost & compute:</strong> Use staged approach (Bedrock pilot → expand) to manage spend; use spot instances and efficient training recipes.</li>
+            </ul>
+
+            <h3>Connection to recent radiology scaling research</h3>
+            <p>Recent work on radiology scaling laws shows large performance gains when performing continual in-domain pretraining on institution-specific imaging corpora (even modestly sized datasets can provide outsized improvements). This supports our strategy to begin with Bedrock fine-tuning for speed and safety, and then move to larger in-domain continual pretraining if required.</p>
+
+            <h3>Contact & next steps</h3>
+            <p>If you're interested in collaborating, contributing labeled data, or reviewing the governance plan, please contact the project leads:</p>
+            <ul>
+              <li>MD Diana Wiseman — wisedb@uw.edu</li>
+              <li>Core team: Benjamin Han, Pari (MS), PhD Rupak Rajachar — (internal UW contacts)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
