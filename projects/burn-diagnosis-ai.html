@@ -179,6 +179,11 @@
         </div>
 
         <img src="../pics/skin_burn.png" alt="Burn Diagnosis AI Challenge" class="project-detail-image">
+        
+        <div style="text-align: center; margin: 32px 0;">
+            <img src="../pics/burn-diagnosis-3rd-place.pdf" alt="3rd Place Certificate" style="max-width: 600px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <p style="margin-top: 16px; color: #666; font-style: italic;">3rd Place Award Certificate - Seoul National University Hospital AI Challenge</p>
+        </div>
 
         <div class="project-detail-content">
             <div class="achievement-badge">🏅 3rd Place Winner</div>
@@ -197,7 +202,7 @@
 
             <h3>Key project objectives</h3>
             <ul>
-              <li>Develop a computer vision system for automated burn severity classification.</li>
+              <li>Develop a computer vision model to detect region-of-interest for burn and classify the severity of the burn.</li>
               <li>Create a robust model that works across diverse patient populations and burn types.</li>
               <li>Ensure high accuracy in critical emergency medicine scenarios.</li>
               <li>Provide interpretable results to support clinical decision-making.</li>
@@ -208,38 +213,50 @@
             <p>Burn injuries are classified by depth and extent, with different treatment protocols for each category. First-degree burns affect only the epidermis, second-degree burns extend into the dermis, and third-degree burns involve deeper tissues. Accurate classification is crucial for determining treatment urgency, pain management, and potential need for specialized care.</p>
 
             <h3>Technical approach</h3>
-            <p>Our solution leveraged state-of-the-art computer vision techniques:</p>
+            <p>Our solution implemented a dual-model architecture combining object detection and classification:</p>
             <ul>
-              <li><strong>Data preprocessing:</strong> Image normalization, augmentation, and quality enhancement for diverse burn presentations.</li>
-              <li><strong>Model architecture:</strong> Custom CNN architecture optimized for medical image classification.</li>
-              <li><strong>Transfer learning:</strong> Pre-trained models fine-tuned on medical imaging datasets.</li>
-              <li><strong>Ensemble methods:</strong> Multiple model predictions combined for improved accuracy and robustness.</li>
+              <li><strong>Data preprocessing:</strong> Image resizing to 256x256, normalization, and tensor conversion using PyTorch transforms.</li>
+              <li><strong>Regression model (Bounding Box Detection):</strong> ResNet34-based architecture with custom FC layer (512→4) for burn region localization using IoU loss.</li>
+              <li><strong>Classification model (Severity Classification):</strong> ResNet34 architecture with 5-class output for burn severity classification (0-4 stages).</li>
+              <li><strong>Training strategy:</strong> Adam optimizer with learning rate scheduling (5e-3 → 3.2e-3 → 2.56e-3 → 2.048e-3) and progressive training over 6 iterations.</li>
+              <li><strong>Loss functions:</strong> HuberLoss for regression (delta=1.0) and CrossEntropyLoss for classification.</li>
+              <li><strong>Evaluation metrics:</strong> IoU (Intersection over Union) for bounding box accuracy and classification accuracy for severity prediction.</li>
             </ul>
 
             <h3>Dataset & validation</h3>
             <ol>
-              <li><strong>Data collection:</strong> Curated dataset of burn injury images from Seoul National University Hospital.</li>
-              <li><strong>Expert annotation:</strong> Images labeled by board-certified plastic and reconstructive surgeons.</li>
-              <li><strong>Quality control:</strong> Multi-expert validation of classification labels.</li>
-              <li><strong>Cross-validation:</strong> Rigorous evaluation using stratified k-fold cross-validation.</li>
+              <li><strong>Dataset structure:</strong> Organized into Training/Validation/Test splits with JPG images and corresponding JSON annotation files containing bounding box coordinates and severity labels.</li>
+              <li><strong>Data format:</strong> Custom BurnDataset class handling image loading, JSON parsing for bbox coordinates (x, y, w, h) normalized to [0,1] range, and 5-class severity labels (0-4).</li>
+              <li><strong>Data loading:</strong> DataLoader with batch_size=32 for training, batch_size=1 for validation/testing, 24 workers for parallel processing, and pin_memory for GPU optimization.</li>
+              <li><strong>Validation strategy:</strong> Real-time validation every 32 steps during training with IoU calculation for regression and accuracy metrics for classification.</li>
+              <li><strong>Test evaluation:</strong> Comprehensive testing with inference time measurement, per-class performance analysis, and visualization of bounding box predictions.</li>
             </ol>
 
             <h3>Model development strategy</h3>
-            <p>Our development process focused on clinical utility:</p>
+            <p>Our development process implemented a systematic dual-model approach:</p>
             <ol>
-              <li><strong>Baseline establishment:</strong> Traditional machine learning approaches for comparison.</li>
-              <li><strong>Deep learning exploration:</strong> Various CNN architectures tested and optimized.</li>
-              <li><strong>Clinical validation:</strong> Performance evaluation against expert clinician assessments.</li>
-              <li><strong>Real-world testing:</strong> Validation in simulated emergency medicine scenarios.</li>
+              <li><strong>Regression model development:</strong> ResNet34 backbone with custom FC layer for bounding box regression, trained using HuberLoss with progressive learning rate decay over 6 training cycles (512 iterations each).</li>
+              <li><strong>Classification model development:</strong> Separate ResNet34 architecture for 5-class severity classification, trained with CrossEntropyLoss and StepLR scheduler (gamma=0.75, step_size=5).</li>
+              <li><strong>Training optimization:</strong> Progressive learning rate reduction (5e-3 → 4e-3 → 3.2e-3 → 2.56e-3 → 2.048e-3) with model checkpointing based on validation IoU scores.</li>
+              <li><strong>Evaluation framework:</strong> Real-time validation every 32 steps with IoU calculation for regression accuracy and classification accuracy metrics, with comprehensive test evaluation including inference time analysis.</li>
+              <li><strong>Model integration:</strong> Combined inference pipeline with regression model for burn region detection followed by classification model for severity assessment.</li>
             </ol>
 
             <h3>Performance & results</h3>
-            <p>Our system achieved:</p>
+            <p>Our system achieved outstanding performance across all burn severity classes:</p>
             <ul>
-              <li><strong>Classification accuracy:</strong> >95% accuracy in burn severity classification.</li>
-              <li><strong>Processing speed:</strong> Real-time analysis (< 2 seconds per image).</li>
-              <li><strong>Clinical validation:</strong> Strong correlation with expert clinician assessments.</li>
-              <li><strong>Robustness:</strong> Consistent performance across diverse patient populations and burn types.</li>
+              <li><strong>Overall performance:</strong> mAP@IoU(0.5) of 0.89, IoU of 0.76, with 0.76 precision and 0.76 recall.</li>
+              <li><strong>Class-specific performance:</strong>
+                <ul>
+                  <li>1st Class: mAP@IoU(0.5) 0.86, IoU 0.68</li>
+                  <li>2nd Class: mAP@IoU(0.5) 0.95, IoU 0.73, Perfect precision/recall (1.0)</li>
+                  <li>2nd-Deep Class: mAP@IoU(0.5) 0.96, IoU 0.80</li>
+                  <li>3rd Class: mAP@IoU(0.5) 0.98, IoU 0.82, Perfect precision/recall (1.0)</li>
+                  <li>4th Class: mAP@IoU(0.5) 0.71, IoU 0.80</li>
+                </ul>
+              </li>
+              <li><strong>Inference speed:</strong> Ultra-fast processing with average inference time of 0.0188 seconds per image.</li>
+              <li><strong>Real-time capability:</strong> Consistent sub-20ms inference across all severity classes, enabling real-time clinical decision support.</li>
             </ul>
 
             <h3>Team & roles</h3>
