@@ -177,41 +177,18 @@
             </div>
 
             <h2>Project Overview</h2>
-            <p>Building a Foundation Model for traumatic brain and spinal injuries that can extract and structure data from medical records and imaging. Project aims to help clinicians categorize injuries, track recovery, and recommend treatment, while also addressing inequities in care by factoring in social determinants of health.</p>
+            <p>
+            This project aims to address a pressing challenge in trauma care — the vast amount of underutilized data stored across hospital systems. At Harborview Medical Center, a Level I trauma center, large volumes of imaging, clinical notes, and outcomes data are collected but remain fragmented and difficult to integrate for research or clinical use. Our objective is to explore how these heterogeneous data sources can be transformed into structured, privacy-preserving knowledge that supports clinicians in understanding injuries, tracking recovery, and making equitable treatment decisions. Rather than simply building another foundation model, the project investigates how large multimodal AI systems can be responsibly adapted to serve as domain specialists in traumatic brain and spinal injury.
+            </p>
+
             <h2>Detailed Introduction</h2>
-            <p><strong>Motivation.</strong> Traumatic brain injury (TBI) and spinal cord injury (SCI) cause enormous individual and societal burden — in morbidity, long-term disability, and cost. Clinical information required to guide care is often dispersed across free-text clinical notes, imaging studies, and administrative records. Our goal is to create a robust, privacy-preserving foundation model that consolidates these multi-source signals into structured, actionable clinical knowledge to support clinicians, researchers, and patients.</p>
+            <p>
+            <strong>Motivation.</strong> Traumatic brain injury (TBI) and spinal cord injury (SCI) continue to impose major clinical and societal burdens, yet the datasets that could improve care remain largely unexploited due to privacy, accessibility, and scalability barriers. Through close collaboration with Harborview Medical Center, we discovered that many of these data are securely stored but not analyzed or connected across departments. This project seeks to tackle that gap by developing and evaluating technical strategies for <strong>adapting and fine-tuning large-scale foundation models</strong> to this domain—assessing how much data, what model configurations, and what governance processes are needed for a general-purpose foundation model (such as AWS Nova) to become a reliable, transparent, and clinically useful specialist model for TBI and SCI.
+            </p>
 
-            <h3>Key project objectives</h3>
-            <ul>
-              <li>Develop a multimodal foundation model (text + radiology imaging + structured EHR signals) focused on brain and spinal trauma.</li>
-              <li>Extract and normalize clinically relevant entities (injury type, severity, interventions, devices, outcomes, SDOH data).</li>
-              <li>Provide clinician-facing tools for categorization, recovery tracking, and evidence-based next-step recommendations.</li>
-              <li>Design and apply privacy-preserving transforms (e.g., Stained Glass Transform) to enable secure model training and limited third-party access.</li>
-              <li>Perform rigorous evaluation for accuracy, fairness, privacy leakage, and clinical utility including third-party audits.</li>
-            </ul>
-
-            <h3>Background: Harborview Level I Trauma Context</h3>
-            <p>Harborview Medical Center is the region's Level I trauma and burn center and serves a high volume of complex trauma cases across Washington, Alaska, Montana, and Idaho. As a safety-net, academic referral center, Harborview treats diverse and often under-served populations — making it uniquely positioned to provide the high-volume, heterogeneous data necessary for building a clinically useful foundation model.</p>
-
-            <h3>Why a dedicated foundation model?</h3>
-            <p>General foundation models often underperform on institution-specific radiology workflows, modality characteristics, and reporting conventions. Domain-adaptive pretraining (continual in‑domain pretraining) demonstrated in recent radiology scaling studies shows significant gains even with moderate amounts of curated local data; therefore, a focused foundation model will be more accurate, robust, and clinically useful for TBI/SCI tasks than a general-purpose model alone.</p>
-
-            <h3>Data pipeline & privacy strategy</h3>
-            <ol>
-              <li><strong>Acquisition & governance:</strong> IRB approvals, data use agreements, consent where required. Define cohorts (TBI, SCI), inclusion/exclusion, and data retention rules.</li>
-              <li><strong>Stained Glass Transform (SGT):</strong> Apply privacy-preserving transforms early in the pipeline so that stored training copies minimize re-identification risk while preserving task-relevant signals.</li>
-              <li><strong>Preprocessing & labeling:</strong> Natural language processing (de-identification, tokenization, mapping to clinical ontologies), imaging normalization, automated and expert annotation (for injuries, hardware, severity metrics), and SDOH linkage (zip code, insurance, housing status as allowed).</li>
-              <li><strong>Data validation & split:</strong> Create held-out institutional and external test sets for robust validation; track metadata (scanner, protocol, demographics).</li>
-            </ol>
-
-            <h3>Model development strategy (high level)</h3>
-            <p>We recommend an incremental approach:</p>
-            <ol>
-              <li><strong>Pilot fine-tuning (cloud-based):</strong> Start by fine-tuning a commercially supported foundation model via AWS Bedrock using SGT-protected text and low-resolution imaging to prove feasibility and clinician utility.</li>
-              <li><strong>Incremental modality expansion:</strong> Add high-resolution CT/MRI/angiography, implement multimodal fusion layers, and incorporate report supervision (clinical labels + UniCL-like structured supervision).</li>
-              <li><strong>Custom domain foundation:</strong> If required by performance or control needs, use continual pretraining on a larger SGT-protected in-domain corpus (tens of thousands to millions of images/text pairs) to create a trauma-optimized foundation encoder (vision & language branches) similar to approaches in recent radiology scaling law studies.</li>
-              <li><strong>Third-party evaluation & governance:</strong> Engage independent clinical and technical auditors for fairness, privacy, and safety assessments before any clinical pilot.</li>
-            </ol>
+            <p>
+            Our approach is research-driven and interdisciplinary: we work directly with clinicians from neurosurgery, orthopedics, and rehabilitation medicine to define meaningful downstream tasks while experimenting with scalable, privacy-preserving multimodal learning frameworks. The long-term goal is to establish a reproducible pathway for converting complex, unstructured clinical data into equitable and interpretable AI systems that augment, rather than replace, medical decision-making.
+            </p>
 
             <h3>Evaluation, safety & fairness</h3>
             <p>Evaluation will include standard technical metrics (AUC, sensitivity, specificity, dice for segmentation), but must also include:</p>
