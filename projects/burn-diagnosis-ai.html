@@ -1,173 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burn Diagnosis AI Challenge | June Lee</title>
+    <title>Burn Diagnosis AI — 3rd Place | June Lee</title>
+    <meta name="description" content="Two-stage detection + severity classification pipeline for burn depth assessment. 3rd Place at SNUH national AI challenge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .project-detail-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 48px 20px;
-        }
-        
-        .project-detail-header {
-            margin-bottom: 48px;
-            text-align: center;
-        }
-        
-        .project-detail-header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 16px;
-        }
-        
-        .project-detail-meta {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-        }
-        
-        .project-detail-image {
-            width: 100%;
-            max-width: 600px;
-            height: 300px;
-            object-fit: contain;
-            background: white;
-            border-radius: 12px;
-            margin: 0 auto 32px auto;
-            display: block;
-        }
-        
-        .project-detail-content {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e5e7eb;
-            padding: 2rem;
-            margin-bottom: 32px;
-        }
-        
-        .project-detail-content h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .project-detail-content h2:first-child {
-            margin-top: 0;
-        }
-        
-        .project-detail-content h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        
-        .project-detail-content p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        
-        .project-detail-content ul, .project-detail-content ol {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-        }
-        
-        .project-detail-content li {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .project-tags .tag {
-            background: #f0f9ff;
-            color: #0369a1;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid #e0f2fe;
-        }
-        
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-bottom: 32px;
-        }
-        
-        .back-button:hover {
-            background: #000;
-            transform: translateY(-1px);
-        }
-        
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-        
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .timeline .item {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 1rem;
-            border-left: 4px solid #0369a1;
-        }
-        
-        .achievement-badge {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            .two-col {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-detail-header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
+<!-- removed inline styles, now using shared styles.css -->
 <body>
     <div class="project-detail-container">
         <a href="../index.html" class="back-button">← Back to Portfolio</a>
@@ -289,7 +131,7 @@
             </ul>
 
             <h3>Clinical impact</h3>
-            <div class="timeline">
+            <div class="detail-timeline">
               <div class="item"><strong>Emergency triage:</strong> Rapid burn assessment in emergency departments.</div>
               <div class="item"><strong>Telemedicine:</strong> Remote burn assessment for rural and underserved areas.</div>
               <div class="item"><strong>Training support:</strong> Educational tool for medical students and residents.</div>
