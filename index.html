@@ -93,26 +93,44 @@
 
             <div class="projects-grid">
 
-                <!-- WiseFind -->
-                <div class="project-card reveal" style="--card-accent: var(--accent-primary);">
+                <!-- WiseMind Platform (Featured) -->
+                <div class="project-card featured reveal" style="--card-accent: var(--accent-primary);">
                     <div class="project-card-image">
-                        <img src="./pics/brain_injury.png" alt="WiseFind: Structure-as-Context Multimodal RAG">
+                        <img src="./pics/brain_injury.png" alt="WiseMind: Full-Stack Neurosurgical AI Platform">
                     </div>
                     <div class="project-card-body">
                         <div class="project-card-meta">
                             <span class="project-card-date">Sep 2025 – Present</span>
-                            <span class="project-card-badge">MICCAI 2026</span>
+                            <span class="project-card-badge">Full-Stack AI Platform</span>
                         </div>
-                        <h3 class="project-card-title">WiseFind: Multimodal RAG for Neurosurgery</h3>
+                        <h3 class="project-card-title">WiseMind: Neurosurgical AI Platform</h3>
                         <p class="project-card-desc">
-                            Shotgun Retrieval via THC Tree — P@1 0.848, MRR 0.872, 3.3× above best visual baseline. Deployed at Harborview Medical Center with MedGemma + RAG.
+                            End-to-end clinical AI platform for neurosurgery, deployed at Harborview Medical Center. 
+                            Integrates multimodal retrieval, spine analysis, and surgical simulation into a unified full-stack system.
                         </p>
-                        <div class="project-card-tags">
-                            <span class="project-tag">Multimodal RAG</span>
-                            <span class="project-tag">ColBERT</span>
-                            <span class="project-tag">MedGemma</span>
+                        <div class="wisemind-modules">
+                            <div class="wisemind-module">
+                                <span class="module-name">🔍 WiseFind</span>
+                                <span class="module-desc">Structure-as-Context Multimodal RAG — P@1 0.848, MRR 0.872 via THC Tree Shotgun Retrieval</span>
+                                <span class="project-card-badge" style="font-size: 0.65rem;">MICCAI 2026</span>
+                            </div>
+                            <div class="wisemind-module">
+                                <span class="module-name">🦴 WiseSpine</span>
+                                <span class="module-desc">Spine Segmentation + Physics-Guided Fracture Simulation with Continuum Damage Mechanics (A1–A4)</span>
+                                <span class="project-card-badge" style="font-size: 0.65rem;">NeurIPS 2026</span>
+                            </div>
                         </div>
-                        <a href="projects/brain-trauma-injury.html" class="project-link">Learn more ↗</a>
+                        <div class="project-card-tags">
+                            <span class="project-tag">MedGemma</span>
+                            <span class="project-tag">ColBERT</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">Physics Sim</span>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="projects/brain-trauma-injury.html" class="project-link">Details ↗</a>
+                            <a href="https://github.com/born-june04/wisespine" class="project-link" target="_blank">GitHub ↗</a>
+                        </div>
                     </div>
                 </div>
 
@@ -156,29 +174,6 @@
                             <span class="project-tag">Zero-shot</span>
                             <span class="project-tag">MRI</span>
                             <span class="project-tag">Biomarkers</span>
-                        </div>
-                        <a href="#" class="project-link">Learn more ↗</a>
-                    </div>
-                </div>
-
-                <!-- WiseSpine -->
-                <div class="project-card reveal" style="--card-accent: var(--accent-blue);">
-                    <div class="project-card-image" style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); display:flex; align-items:center; justify-content:center;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-card-date">Sep 2025 – Present</span>
-                            <span class="project-card-badge">NeurIPS 2026</span>
-                        </div>
-                        <h3 class="project-card-title">WiseSpine: Physics-Guided Surgical Simulation</h3>
-                        <p class="project-card-desc">
-                            Grid-based stress transfer simulator with anisotropic Continuum Damage Mechanics reproducing AO-type fracture evolution (A1–A4).
-                        </p>
-                        <div class="project-card-tags">
-                            <span class="project-tag">Physics Sim</span>
-                            <span class="project-tag">RL</span>
-                            <span class="project-tag">Spine</span>
                         </div>
                         <a href="#" class="project-link">Learn more ↗</a>
                     </div>
@@ -354,8 +349,18 @@
                     <div class="sidebar-tl-org">UW Ubicomp Lab</div>
                     <div class="sidebar-tl-date">Sep 2025 – Present</div>
                     <ul class="sidebar-tl-desc">
-                        <li>TB cough detection, multimodal RAG, physics-guided spine simulation</li>
+                        <li>WiseMind — full-stack neurosurgical AI platform (WiseFind + WiseSpine)</li>
+                        <li>TB cough detection for Nature Communications</li>
                         <li>Advised by Prof. Shwetak N. Patel</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-tl-item">
+                    <div class="sidebar-tl-role">Teaching Assistant</div>
+                    <div class="sidebar-tl-org">UW BIOE 437/537</div>
+                    <div class="sidebar-tl-date">Fall 2025</div>
+                    <ul class="sidebar-tl-desc">
+                        <li>Enzyme kinetic simulation & optimization coursework</li>
                     </ul>
                 </div>
 
@@ -371,15 +376,6 @@
                 </div>
 
                 <div class="sidebar-tl-item">
-                    <div class="sidebar-tl-role">Teaching Assistant</div>
-                    <div class="sidebar-tl-org">UW BIOE 437/537</div>
-                    <div class="sidebar-tl-date">Fall 2025</div>
-                    <ul class="sidebar-tl-desc">
-                        <li>Enzyme kinetic simulation & optimization coursework</li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-tl-item">
                     <div class="sidebar-tl-role">Research Intern</div>
                     <div class="sidebar-tl-org">HUFS Bioinformatics Lab</div>
                     <div class="sidebar-tl-date">Jan 2022 – Dec 2025</div>
@@ -390,7 +386,7 @@
 
                 <div class="sidebar-tl-item">
                     <div class="sidebar-tl-role">Student Researcher</div>
-                    <div class="sidebar-tl-org">MedicalVision Lab</div>
+                    <div class="sidebar-tl-org">MedicalVision Lab — HUFS</div>
                     <div class="sidebar-tl-date">Aug 2022 – Apr 2023</div>
                     <ul class="sidebar-tl-desc">
                         <li>MRI bias field correction — MIDL 2023</li>
